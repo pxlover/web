@@ -18,7 +18,7 @@ func Server() {
 }
 
 func routers(route *gin.Engine) {
-	route.LoadHTMLGlob("/Users/noone/Documents/work/index.html")
+	route.LoadHTMLGlob("template/index.html")
 	route.GET("/", func(context *gin.Context) {
 		context.HTML(http.StatusOK, "index.html", nil)
 	})
